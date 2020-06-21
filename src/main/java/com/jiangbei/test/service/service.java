@@ -1,7 +1,7 @@
 package com.jiangbei.test.service;
 
 import com.jiangbei.test.dao.BaseDao;
-import com.jiangbei.test.pojo.Dict;
+import com.jiangbei.test.pojo.DEPT;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +15,8 @@ import org.springframework.stereotype.Service;
 public class service {
     @Autowired
     private BaseDao baseDao;
-    public Dict select(int id){
-        Dict dict = baseDao.selectById(id);
+    public DEPT select(int id){
+        DEPT dict = baseDao.selectById(id);
         return dict;
     }
 }

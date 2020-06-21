@@ -1,5 +1,5 @@
 import com.jiangbei.test.dao.BaseDao;
-import com.jiangbei.test.pojo.Dict;
+import com.jiangbei.test.pojo.DEPT;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,7 +14,7 @@ public class testMybatis {
     public void test1(){
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/applicationContext-dao.xml");
         BaseDao baseDao = (BaseDao)context.getBean("BaseDao");
-        Dict dict = baseDao.selectById(10);
+        DEPT dict = baseDao.selectById(10);
         System.out.println(dict);
     }
 }

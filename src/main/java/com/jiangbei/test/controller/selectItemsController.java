@@ -1,6 +1,6 @@
 package com.jiangbei.test.controller;
 
-import com.jiangbei.test.pojo.Dict;
+import com.jiangbei.test.pojo.DEPT;
 import com.jiangbei.test.service.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,10 +20,10 @@ public class selectItemsController {
 
     @RequestMapping("select")
     @ResponseBody
-    public Dict select(){
+    public DEPT select(){
         int id;
         id=10;
-        Dict dict = service.select(id);
+        DEPT dict = service.select(id);
         return dict;
     }
 }

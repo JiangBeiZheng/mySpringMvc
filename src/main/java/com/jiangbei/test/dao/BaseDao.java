@@ -1,6 +1,6 @@
 package com.jiangbei.test.dao;
 
-import com.jiangbei.test.pojo.Dict;
+import com.jiangbei.test.pojo.DEPT;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +20,9 @@ public class BaseDao {
    /* public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
         this.sqlSessionFactory = sqlSessionFactory;
     }*/
-    public Dict selectById(int id){
+    public DEPT selectById(int id){
         SqlSession sqlSession = sqlSessionFactory.openSession();
-        Dict dict = sqlSession.selectOne("queryUserById", id);
+        DEPT dict = sqlSession.selectOne("queryUserById", id);
         sqlSession.close();
         return dict;
     }
