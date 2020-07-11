@@ -1,7 +1,7 @@
 package com.jiangbei.test.controller;
 
 import com.jiangbei.test.pojo.DEPT;
-import com.jiangbei.test.service.service;
+import com.jiangbei.test.service.MyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,14 +16,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class selectItemsController {
     @Autowired
-    private service service;
+    private MyService MyService;
 
     @RequestMapping("select")
     @ResponseBody
-    public DEPT select(){
-        int id;
-        id=10;
-        DEPT dict = service.select(id);
+    public DEPT select(String id){
+        int i = Integer.parseInt(id);
+        DEPT dict = MyService.select(i);
         return dict;
     }
 }

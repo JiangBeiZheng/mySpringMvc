@@ -1,6 +1,7 @@
 package com.jiangbei.test.dao;
 
 import com.jiangbei.test.pojo.DEPT;
+import com.jiangbei.test.pojo.User;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,4 +27,15 @@ public class BaseDao {
         sqlSession.close();
         return dict;
     }
+
+    public boolean register(User user) {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        int i = sqlSession.insert("register", user);
+        if(i>0){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
 }

@@ -9,7 +9,8 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
     <!--开启注解-->
     <nacos:annotation-driven></nacos:annotation-driven>
     <!--指定nacos配置地址-->
-    <nacos:global-properties server-addr="192.168.45.128:8848"/>
+    <!--<nacos:global-properties server-addr="192.168.45.128:8848"/>-->
+    <nacos:global-properties server-addr="35.221.196.101:8848"/>
     <!--指定dataId,group-id, 是否是自动刷新-->
     <nacos:property-source data-id="db.properties" group-id="DEFAULT_GROUP" auto-refreshed="true"/>
 </beans>
