@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @Author:JIANGBEI
  * @Date:2020/6/14 19:17
  * @Version: 1.0
- * @Description:
+ * @Description:测试查询controller
  */
 @Controller
 public class selectItemsController {
